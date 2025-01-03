@@ -1,0 +1,35 @@
+#
+# Copyright (c) 2025 Fas Xmut (fasxmut at protonmail dot com)
+#
+# Distributed under the Boost Software License, Version 1.0. (See accompanying
+# file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+#
+
+# b2 build
+
+lib
+	haiku-media
+:
+:
+	<name>media
+;
+
+project
+	:
+		requirements
+			<library>haiku-media
+	:
+		default-build
+			<cxxstd>23
+;
+
+local progs =
+	01-BSoundPlayer
+	02-440Hz-saw-audio
+;
+
+for prog in $(progs)
+{
+	exe $(prog) : $(prog).cpp ;
+}
+
