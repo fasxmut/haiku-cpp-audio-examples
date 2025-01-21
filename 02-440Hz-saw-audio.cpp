@@ -31,7 +31,7 @@ public:
 		std::cout << "cookie is removed" << std::endl;
 		__stop = std::chrono::system_clock::now();
 		std::cout << "App duration: "
-			<< (__stop - __start).count()  * 1.0 / 1'000'000'000 << " minutes"
+			<< (__stop - __start).count()  * 1.0 / 1'000'000'000 << " seconds"
 			<< std::endl;
 	}
 	cookie(std::float32_t frequency__):
